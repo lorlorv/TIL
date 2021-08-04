@@ -24,7 +24,7 @@ ___
 * message 작성과 한번에 commit
 </br>
 
---> 버전 생성의 한 과정
+--> 버전 생성의 한 과정</br>
 ![버전 생성](./image/git1.jpg)
 
 ### `git log`
