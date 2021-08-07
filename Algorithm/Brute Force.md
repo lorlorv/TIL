@@ -67,6 +67,56 @@
     ```
 
 `5. BFS/DFS`
+</br>
+### ✏순열
+
+
+- 뽑는 아이템의 순서가 중요하다! 
+- 123 132 231 ...  = 다 다른 친구들
+
+```C
+#include<stdio.h>
+
+int n = 4, r = 3; //4개 중에서 3개 뽑기
+int check[4]; 
+int result[3]; //결과를 담을 배열
+int arr[] = { 1,2,3,4 };
+
+void permutation(int idx) { //순열
+	if (idx == r) {
+		for (int i = 0; i < r; i++) {
+			printf("%d", result[i]);
+		}
+		printf("\n");
+		return;
+	}
+
+	for (int i = 0; i < n; i++) {
+		if (check[i] != 1) {
+			result[idx] = arr[i];
+			check[i] = 1; // TRUE
+			permutation(idx + 1);
+			check[i] = 0; //FALSE
+		}
+	}
+}
+int main(void) {
+	permutation(0);
+}
+```
+- `check` :  특정 수가 뽑혔는 지 안 뽑혔는 지 확인 
+- `result` : 결과를 담아 출력 시 활용할 배열 
+- `idx` : 뽑아야 할 자리의 index
+- `permutation 함수` : 
+	 - check[i]의 자리를 검사! 
+	 	- -> TRUE 가 아니면 result[idx]에 arr[i]의 값을 넣어주고 check를 TRUE로 바꿔주기.
+			- 다음 자리에 수를 넣기위해 idx + 1로 재귀 수행!
+		- -> TRUE 라면 다음 check값으로 넘어간다.
+
+	- idx와 뽑아야 할 개수인 r이 같다면 
+		- 지금까지 모았던 result를 출력해준다.
+	- 재귀를 다 수행했다면 백 트래킹으로 check[i]값을 FALSE로 바꿔주고 다른 수를 넣어준다.
+	 
 
 ___
 </br>
