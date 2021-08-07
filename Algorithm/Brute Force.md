@@ -116,6 +116,54 @@ int main(void) {
 	- idx와 뽑아야 할 개수인 r이 같다면 
 		- 지금까지 모았던 result를 출력해준다.
 	- 재귀를 다 수행했다면 백 트래킹으로 check[i]값을 FALSE로 바꿔주고 다른 수를 넣어준다.
+
+</br>
+
+### ✏조합
+
+
+- 뽑는 아이템의 순서는 중요하지않다! 
+- 123 132 231 ...  = 다 같은 친구들
+
+```C
+//조합 Combination
+#include <stdio.h>
+
+int n = 4, r = 3; //4개 중에서 3개 뽑기 (순서상관없이)
+int check[4];
+int result[3]; //결과를 담을 배열
+int arr[] = { 1,2,3,4 };
+
+void combination(int idx, int count) { //조합
+	if (count == r) {
+		for (int i = 0; i < r; i++) {
+			printf("%d", result[i]);
+		}
+		printf("\n");
+		return;
+	}
+
+	for (int i = idx; i < n; i++) {
+		if (check[i] != 1) {
+			result[count] = arr[i];
+			check[i] = 1; // TRUE
+			combination(i, count + 1);
+			check[i] = 0; //FALSE
+		}
+	}
+}
+int main(void) {
+	combination(0, 0);
+}
+```
+- `check` :  특정 수가 뽑혔는 지 안 뽑혔는 지 확인 
+- `result` : 결과를 담아 출력 시 활용할 배열 
+- `idx` : 조합은 순서가 상관없기 때문에 맨 첫 수보다 작은 수는 result에 넣을 수가 없음 </br>
+->맨 첫 수의 index를 기억하며 index의 다음 index부터 for문이 돌게한다.
+- **`count`** : result에 수를 넣을 때마다 count를 증가시킨다. 순열에서의 idx와 같은 역할! 
+
+- `combination 함수` : 순열과 비슷하지만 재귀를 수행할 때 매개변수로 i와 count + 1을 넣어주는 것이 차이!
+	- idx에 i값을 넣어주어 i가 idx부터 시작되도록한다.
 	 
 
 ___
