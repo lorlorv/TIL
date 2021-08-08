@@ -10,7 +10,8 @@ ___
 * [GIT 버전관리](https://github.com/lorlorv/TIL/blob/main/Git/GIT_%EB%B2%84%EC%A0%84%EA%B4%80%EB%A6%AC.md) 
     
 ## 📚알고리즘 
-* ...
+* [BFS DFS](https://github.com/lorlorv/TIL/blob/main/Algorithm/BFS%20DFS.md)
+- [Brute Force](https://github.com/lorlorv/TIL/blob/main/Algorithm/Brute%20Force.md)
 
 ## 💻 STUDY
 * [MarkDown 작성법](https://github.com/lorlorv/TIL/blob/main/Study/MarkDown%20%EC%9E%91%EC%84%B1%EB%B2%95.md)
