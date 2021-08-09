@@ -53,7 +53,7 @@
 
 	- 그림 설명
 
-	![BFS](./Images/BFS(queue).jpg)
+	![BFS](./Images/BFS(queue).JPG)
 
 ___
 ## 👉`GRAPH`
