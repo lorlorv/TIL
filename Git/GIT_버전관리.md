@@ -25,7 +25,7 @@ ___
 </br>
 
 --> 버전 생성의 한 과정</br>
-![버전 생성](./image/git1.jpg)
+![버전 생성](./image/git1.JPG)
 
 ### `git log`
 * show version : 버전이 잘 만들어졌는 지 확인
