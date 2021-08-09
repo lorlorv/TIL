@@ -25,7 +25,7 @@
 
 	- 그림 설명
 
-	![DFS](./Images/DFS(stack).jpg)
+	![DFS](./Images/DFS(stack).JPG)
 
 ## 🌙`BFS`
 `넓이 우선 탐색`
