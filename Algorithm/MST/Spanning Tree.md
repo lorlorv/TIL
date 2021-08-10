@@ -38,6 +38,6 @@ ___
 - 도로건설, 전기회로, 통신, 배관
 
 -방법 : 
-- **Kruskal MST**
+- **[Kruskal MST](./Kruskal.md)** 
 - **PRIM MST**
 
