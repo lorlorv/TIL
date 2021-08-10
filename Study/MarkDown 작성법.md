@@ -195,13 +195,13 @@ ___
 
  +) 이미지는 이 마크다운이 있는 폴더 안에 image폴더를 만들어 그 안에 저장한다음 가져오는 것이 편하다!
  ```
- 💨 ![고양이](./image/developer.jpeg)
+ 💨 ![고양이](/Images/developer.jpeg)
 
  ```
  ❕이미지에 링크를 걸고싶다면?
 [![이미지 설명](이미지 링크)](연결할 url " 마우스를 갖다대면 나타낼 text")
 ```
-💨 [![고양고양](./image/developer.jpeg)](https://lorlorv.tistory.com/ "야옹")
+💨 [![고양고양](/Images/developer.jpeg)](https://lorlorv.tistory.com/ "야옹")
 
 ```
 ❕이미지는 gif도 가능
