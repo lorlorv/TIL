@@ -6,7 +6,8 @@
 - 브랜치의 목록을 보여준다.
 
 ### `git branch [branch name]`
-- branch name의 브랜치가 생성된다.
+- branch name의 브랜치가 생성된다.</br>
+
     ![브랜치 생성](/Images/branch생성.JPG)
     - google, apple 이라는 branch 생성
 
