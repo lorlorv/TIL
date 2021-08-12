@@ -11,10 +11,9 @@
 5. `비단말노드 (non-leaf)` : 적어도 하나의 자식을 가지는 노드
 6. `레벨(level)` : 트리의 각층의 번호
 7. `높이(height)` : 트리의 최대 레벨
-8. `차수(degree)` : 노드가 가지고 있는 자식 노드의 개수 
-</br>
+8. `차수(degree)` : 노드가 가지고 있는 자식 노드의 개수 </br>
 
-    ![tree](/Images/tree.JPG)
+    ![tree](/Images/tree.JPG)   
 
 ---
 
