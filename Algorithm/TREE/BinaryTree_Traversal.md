@@ -77,7 +77,61 @@
             if(x→right != NULL) then
                 enqueue(queue, x→right);
     ```
+- 💻 레벨 순회 skeleton
+    ```C
+    //레벨 순회
+    #include <stdio.h>
+    #include <stdlib.h>
+    #define MAX 100
 
+    typedef struct TreeNode {
+        int data;
+        struct TreeNode* left, * right;
+    }TreeNode;
+
+    typedef TreeNode* element;
+    typedef struct {
+        element data[MAX];
+        int front, rear;
+    }QueueType;
+    /*QUEUE 구현 함수들 */
+    void level_order(TreeNode* t) {
+        QueueType q;
+
+        init_queue(&q);
+
+        if (t == NULL)
+            return;
+        enqueue(&q, t);
+        while (!is_empty(&q)) {
+            t = dequeue(&q);
+            printf("[%d] ", t->data);
+
+            if (t->left != NULL)
+                enqueue(&q,t->left);
+            if (t->right != NULL)
+                enqueue(&q, t->right);
+        }
+    }
+
+    //      15
+    //   4      20
+    // 1       16 25
+
+    TreeNode n1 = { 1, NULL, NULL };
+    TreeNode n2 = { 4, &n1, NULL };
+    TreeNode n3 = { 16, NULL, NULL };
+    TreeNode n4 = { 25, NULL, NULL };
+    TreeNode n5 = { 20, &n3, &n4 };
+    TreeNode n6 = { 15, &n2, &n5 };
+    TreeNode* root = &n6;
+
+    int main(void) {
+        printf("레벨 순회=");
+        level_order(root);
+        return 0;
+    }
+    ```
 
 -  ### `pre/in/post 순회`
     - 재귀적
@@ -117,6 +171,59 @@ evaluate (exp)
 3. 그렇지 않으면 왼쪽 서브 트리를 계산하기 위해 evaluate를 다시 순환호출한다. 이때, 매개변수는 왼쪽 자식 노드가 된다.
 4. 똑같은 식으로 오른쪽 서브 트리를 계산한다.
 5. 추출된 연산자를 가지고 연산을 수행해서 반환한다.
+
+</br>
+
+- 💻수식트리 skeleton
+    ```C
+    //수식 계산 트리
+    #include <stdio.h>
+
+    typedef struct TreeNode {
+        int data;
+        struct TreeNode* left, * right;
+    }TreeNode;
+
+    int evaluate(TreeNode* t) {
+        if (t == NULL)return 0;
+        if (t->left == NULL && t->right == NULL) return t->data; //단말노드
+        else {
+            int op1 = evaluate(t->left); //왼쪽 서브 트리 계산
+            int op2 = evaluate(t->right); //오른쪽 서브 트리 계산
+
+            printf("%d %c %d을 계산합니다.\n", op1, t->data, op2);
+
+            switch (t->data) {
+            case '+':
+                return op1 + op2;
+            case '-':
+                return op1 - op2;
+            case '*':
+                return op1 * op2;
+            case '/':
+                return op1 / op2;
+            }
+        }
+        return 0;
+    }
+    //        +  
+    //    *       /
+    //  3  4     8  2
+
+    TreeNode n1 = { 3, NULL, NULL };
+    TreeNode n2 = { 4, NULL, NULL };
+    TreeNode n3 = { '*', &n1, &n2 };
+    TreeNode n4 = { 8, NULL, NULL };
+    TreeNode n5 = { 2, NULL, NULL };
+    TreeNode n6 = { '/', &n4, &n5 };
+    TreeNode n7 = { '+', &n3, &n6 };
+    TreeNode* root = &n7;
+
+    int main(void) {
+        printf("값은=%d\n", evaluate(root));
+        return 0;
+    }
+    ```
 
 
 
