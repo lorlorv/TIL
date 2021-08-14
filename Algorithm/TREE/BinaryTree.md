@@ -124,6 +124,43 @@ level 1부터 k - 1까지는 모두 채워져 있고 마지막 level k에서는 
             return 0;
         }
         ```
+---
+</br>
+
+## 이진 트리의 추가 연산
+
+- ### `노드의 개수`
+    ```C
+    int get_node_count(TreeNode *node){
+        int count = 0;
+        if(node != NULL)
+        count = 1 + get_node_count(node→left) + get_node_count(node→right);
+        return count;
+    }
+    ```
+
+- ### `단말 노드의 개수`
+    ```C
+    int get_leaf_count(TreeNode *node){
+        int count = 0;
+        if(node != NULL){
+            if(node→left == NULL && node→right == NULL)
+                return 1;
+            else
+                count = get_leaf_count(node→left) + get_leaf_count(node→right);
+        }
+        return count;
+    }
+    ```
+
+- ### `높이 구하기`
+    ```C
+    int get_height(TreeNode *node){
+        int height = 0;
+        if(node != NULL){
+            height = 1 + MAX(get_height(node→left), get_height(node→right))
+        }
+    }
 
 
 
