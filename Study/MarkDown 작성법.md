@@ -1,7 +1,7 @@
 # ✏Mark Down 작성법
 (_2021-08-04~_)
 
-## 0) Text 입력 
+## Text 입력 
 `텍스트 입력은 그냥 이렇게`
 
 ## 1) 제목
@@ -266,4 +266,15 @@ ___
 <span style = "color : blue"> BLUE </span> </br>
 <span style = "color : #f58787">#f587873</span> </br>
 <span style = "color : rgb(135, 250, 35)">GREEN</span>
+___
+</br>
 
+## 14) 같은 파일 내 위치 이동
+```
+[보여질 text 내용](#이동할-text-내용)
+
+
+1. 띄어쓰기는 -(하이픈)
+2. 영어는 모두 소문자!
+```
+[맨 처음으로!](#text-입력)
