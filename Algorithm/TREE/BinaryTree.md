@@ -167,6 +167,12 @@ level 1부터 k - 1까지는 모두 채워져 있고 마지막 level k에서는 
     }
     ```
 
+----
+</br>
+
+### [💻연산 추가 링크표현법 이진 트리](https://github.com/lorlorv/algorithm/blob/main/BinaryTree/binaryTree_linked/binaryTree_linked.c) 
+
+
 
 
 
