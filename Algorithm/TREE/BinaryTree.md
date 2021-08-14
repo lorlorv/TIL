@@ -130,6 +130,7 @@ level 1부터 k - 1까지는 모두 채워져 있고 마지막 level k에서는 
 ## 이진 트리의 추가 연산
 
 - ### `노드의 개수`
+    ![](/Images/node_count.JPG)
     ```C
     int get_node_count(TreeNode *node){
         int count = 0;
@@ -140,6 +141,7 @@ level 1부터 k - 1까지는 모두 채워져 있고 마지막 level k에서는 
     ```
 
 - ### `단말 노드의 개수`
+    ![](/Images/leaf_count.JPG)
     ```C
     int get_leaf_count(TreeNode *node){
         int count = 0;
@@ -153,14 +155,17 @@ level 1부터 k - 1까지는 모두 채워져 있고 마지막 level k에서는 
     }
     ```
 
-- ### `높이 구하기`
+- ### `높이 구하기` 
+    ![](/Images/get_height.JPG)
     ```C
     int get_height(TreeNode *node){
         int height = 0;
         if(node != NULL){
-            height = 1 + MAX(get_height(node→left), get_height(node→right))
+            height = 1 + MAX(get_height(node→left), get_height(node→right));
         }
+        return height;
     }
+    ```
 
 
 
