@@ -278,3 +278,23 @@ ___
 2. 영어는 모두 소문자!
 ```
 [맨 처음으로!](#text-입력)
+
+---
+</br>
+
+## 15) 접기/펼치기
+```
+<details markdown="1"> 
+//markdown에는 기능이 없기 때문에 html의 details를 사용한다.
+
+<summary>접은 글의 제목</summary>
+
+접은 글의 내용
+
+</details>
+```
+
+<details markdown="1">
+<summary>접은 글의 제목</summary>
+접은 글의 내용
+</details>
