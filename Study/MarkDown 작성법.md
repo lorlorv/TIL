@@ -286,7 +286,7 @@ ___
 ```
 <details markdown="1"> 
 //markdown에는 기능이 없기 때문에 html의 details를 사용한다.
-
+//markdown="1"의 의미 : 접기/펼치기 블록안에서 markdown의 문법을 사용한다!
 <summary>접은 글의 제목</summary>
 
 접은 글의 내용
