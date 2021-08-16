@@ -15,3 +15,6 @@
 - apple이라는 브랜치로 이동한다.
 - head->apple
 - apple이라는 브랜치로 이동하면서 working tree 또한 apple의 버전을 따라간다.
+
+___
+출처 : [생활코딩](https://opentutorials.org/course/3839)

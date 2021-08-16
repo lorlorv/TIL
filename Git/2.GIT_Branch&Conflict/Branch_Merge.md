@@ -75,3 +75,6 @@ ex) "o2" branch의 내용을 → master branch로 합치기
 - 바꾼 내용이 확실하다면 .org 지우기 
     - `rm ~`
 
+___
+출처 : [생활코딩](https://opentutorials.org/course/3839)
+
