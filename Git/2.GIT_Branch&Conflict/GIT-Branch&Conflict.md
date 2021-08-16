@@ -1,5 +1,9 @@
 # 2. Git CLI - Branch & Conflict 🌳
-## [Branch] 
+[Branch](#branch)</br>
+[Conflict](#conflict)
+
+
+## Branch
 지금까지 만들던 버전에 이어서 서로 다른 여러 작업을 진행해야할 때 
 </br>-> 저장소를 복제하지 않고 동일한 효과를 낼 수 있는 방법!
 ### => **브랜치(branch)**
@@ -35,7 +39,7 @@ Branch : 한 뿌리에서 나왔지만 서로 다른 역사를 써가고 있는 
 
 ---
 
-## [Conflict]
+## Conflict
 branch와 branch를 병합할 때  </br>
  ![conflict ex](/Images/conflict.JPG)
 
@@ -44,8 +48,37 @@ branch와 branch를 병합할 때  </br>
 3. **같은 파일의 같은 부분을 수정했을 때?**
     - 이때 충돌(=conflict)이 일어난다.
 
+## ✏ex) </br>
+: o2 branch의 work.txt와 master branch의 work.txt의 같은 부분을 수정 후 병합 명령어를 입력했을 때 </br>
+: "o2" branch의 내용을 → master branch로 합치기 
+1. `git merge o2` : CONFLICT가 일어난 후 자동적으로 병합하는 것을 실패했으니 알아서 충돌을 해결하고 그 결과를 commit 하라는 error 메세지 등장 </br> 
 
+    ![](/Images/gitImage/conflict.JPG)
 
+- work.txt 파일 : </br>
+
+    ![](/Images/gitImage/conflict_nano.JPG)
+    - `=====` : 파일과 파일의 구분자 
+2.  FIX : master, o2로 내용을 고쳐 conflict를 수정한다.</br>
+
+    ![](/Images/gitImage/conflict해결.JPG)
+
+3.  Fix 후 git commit 
+    - → 자동으로 git merge
+    - `git merge` 시 내용 : 충돌이 있었고 어떻게 해결했는지까지 message로 알 수 있다.
+        
+4. 해결 후 log : </br>
+
+    ![](/Images/gitImage/conflict_log.JPG)
+
+___
+</br>
+
+## Conflict 3 Way Merge
+: git이 충돌을 처리하는 방법 
+- ### `conflict` : 협업때도 일어남 (←branch를 사용하는 것이기 때문!)
+
+![](/Images/gitImage/3-way-merge.JPG)
 
 
 
