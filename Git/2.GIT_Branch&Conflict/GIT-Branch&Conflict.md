@@ -8,7 +8,7 @@
 </br>-> 저장소를 복제하지 않고 동일한 효과를 낼 수 있는 방법!
 ### => **브랜치(branch)**
 
-ex)</br>
+## ✏ ex)</br>
 나는 어떤 회사의 상품 사용 설명서를 작성하는 업무를 맡았다.</br>
 상품이 출시되기 전, 고객사가 없을 때 사용 설명서는 
 - [master] A->B->C->D ... 
@@ -74,12 +74,20 @@ branch와 branch를 병합할 때  </br>
 ___
 </br>
 
-## Conflict 3 Way Merge
-: git이 충돌을 처리하는 방법 
-- ### `conflict` : 협업때도 일어남 (←branch를 사용하는 것이기 때문!)
+##### ↓ 더 공부 한 다음 추가하기 
+</br>
 
-![](/Images/gitImage/3-way-merge.JPG)
+### `git workflow`
+- git flow
 
+### `cherry-pick` : 병합과 관련된 기능 
+![](/Images/gitImage/cherry-pick.JPG)
+
+### `revase` : merge와 목표 자체는 동일, timeline을 더 깔끔하게 할 수 있는 정도!
+![](/Images/gitImage/rebase.JPG)
+
+___
+출처 : [생활코딩](https://opentutorials.org/course/3839)
 
 
 
