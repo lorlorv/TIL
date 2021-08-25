@@ -19,19 +19,19 @@
     ```
 
 ## 값 추가
-- ### `add(value)` 
+- `add(value)` 
     - 성공 → true;
     - 실패 → IllegalStateException
-- ### `offer(value)`
+- `offer(value)`
 
 ## 값 삭제
-- ### `poll()` : 첫번째 값을 반환하고 제거, 비어있다면 null
-- ### `remove()` : 첫번째 값 제거
-- ### `clear()` : 모든 요소를 제거, 초기화
+- `poll()` : 첫번째 값을 반환하고 제거, 비어있다면 null
+- `remove()` : 첫번째 값 제거
+- `clear()` : 모든 요소를 제거, 초기화
 
 ## 참조
-- ### `peek()` : 첫번째 값 반환
-- ### `element()` : 첫번째 값 반환, 큐가 비어있다면 예외 발생
+- `peek()` : 첫번째 값 반환
+- `element()` : 첫번째 값 반환, 큐가 비어있다면 예외 발생
 
 ## Comparable
 PriorityQueue를 사용하기 위해서 우선순위에 저장할 객체는 필수적으로 **Comparable Interface**를 구현해야한다.
